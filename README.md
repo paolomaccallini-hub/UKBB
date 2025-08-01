@@ -79,7 +79,7 @@ A complete run of the example configuration (two phenotypes) requires roughly
 - `Data/ENCFF250UJY.tsv.gz` – RegulomeDB scores from [RegulomeDB](https://www.regulomedb.org/regulome-search/).
 - `UKBB_output/` – final fine-mapped results and locus plots.
 
-Place the downloaded RegulomeDB file (`ENCFF250UJY.tsv.gz`) inside the `Data/` folder before running the analysis.
+Place the downloaded RegulomeDB file (`ENCFF250UJY.tsv`) inside the main folder before running the analysis.
 
 ## Running the pipeline
 
