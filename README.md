@@ -117,4 +117,7 @@ The following images represent the output of fine-mapping on the phenotypes 2000
 
 ## Output: gene-mapping
 
-The genes associated with the phenotypes, and several details on the associations, are collected in the file My_genes_UKBB.csv, included in this repository.
+The genes associated with the phenotypes, and several details on the associations, are collected in the file My_genes_UKBB.csv, included in this repository. They are also reported in the image below.
+
+<img width="1834" height="324" alt="image" src="https://github.com/user-attachments/assets/45a98b9e-b388-4304-ab61-6b18fb2a2919" />
+
