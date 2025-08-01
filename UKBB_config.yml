@@ -1,9 +1,9 @@
 python:
-  path: C:/Users/macpa/AppData/Local/Programs/Python/Python312
+  path: Your_Path
 
 api_keys:
-  OpenGWAS: eyJhbGciOiJSUzI1NiIsImtpZCI6ImF...
-  LDlinkR: 100e14bc74eb
+  OpenGWAS: Your_Open_GWAS_key
+  LDlinkR: Your_LDlinkR_key
 
 filters:
   p_value_common: 5e-08
