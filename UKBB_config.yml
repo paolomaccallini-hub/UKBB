@@ -1,0 +1,25 @@
+python:
+  path: C:/Users/macpa/AppData/Local/Programs/Python/Python312
+
+api_keys:
+  OpenGWAS: eyJhbGciOiJSUzI1NiIsImtpZCI6ImF...
+  LDlinkR: 100e14bc74eb
+
+filters:
+  p_value_common: 5e-08
+  p_value_uncommon: 1e-08
+  hwe_p_value: 1e-06
+  maf_common: 0.05
+  maf_uncommon: 0.01
+  pip_cutoff: 0.1
+  abc_score_cutoff: 0.015
+
+GTEx:
+  version: "gtex_v10"
+
+phenotypes:
+  - "20002_1482"
+  - "R53"
+
+locus:
+  Radius: 500000
