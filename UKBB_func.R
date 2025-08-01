@@ -113,7 +113,7 @@ if(!dir.exists(folder_path)) {
 } 
 #
 #-------------------------------------------------------------------------------
-# Build data base from Neale Lab 
+# Build database from the Neale Lab 
 #-------------------------------------------------------------------------------
 #
 # Download phenotype data, version 2, if not present
@@ -354,7 +354,7 @@ npz2rsd<-function(chrom,position,base_name) {
     dimnames(ld_matrix)<-list(snps$rsid,snps$rsid)
   }
   #
-  # Create a variant column (we cannot select by rsid, because different variants have same rsid)
+  # Create a variant column (we cannot select by rsid, because different variants have the same rsid)
   #
   snps<-snps[,variant:=do.call(paste,c(.SD,sep=":")),.SDcols=c("chromosome","position","allele1","allele2")]
   #
@@ -408,7 +408,7 @@ Fine_map_LD<-function(myvariants) {
   #
   z_scores<-mydata.2$beta/mydata.2$se # we calculate the z score
   #
-  # Set the max number admitted of causal myvariants (L) and the sample size (n) 
+  # Set the maximum number of causal myvariants (L) and the sample size (n) 
   #
   n<-n_cases+n_controls # sample size
   phi<-n_cases/n_controls
@@ -459,7 +459,7 @@ Fine_map_LD<-function(myvariants) {
 }
 #
 #-------------------------------------------------------------------------------
-# This function add RegulomeDB ranking
+# This function adds RegulomeDB ranking
 #-------------------------------------------------------------------------------
 #
 RegulomeDB<-function(myvariants) {
@@ -469,3 +469,4 @@ RegulomeDB<-function(myvariants) {
   #
   return(myvariants)
 }
+
