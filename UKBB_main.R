@@ -1,7 +1,7 @@
 # file name: UKBB_main
 #
 #-------------------------------------------------------------------------------
-# This script performs GWAS analysis (including finemapping) on Neale's Lab 
+# This script performs GWAS analysis (including fine-mapping) on Neale's Lab 
 # phenotypes for the UKBiobank database
 #-------------------------------------------------------------------------------
 #
@@ -27,7 +27,7 @@ for (pheno in phenotypes) {
     if(!dir.exists(file_name)) {
       #
       #-------------------------------------------------------------------------
-      # Read summary statistics and remove low confidence variants
+      # Read summary statistics and remove low-confidence variants
       #-------------------------------------------------------------------------
       #
       print(paste0("Filtering phenotype ",pheno,"-",sex,"..."))
@@ -53,7 +53,7 @@ for (pheno in phenotypes) {
       print("I am adding a few annotations to your variants...")
       mydata<-merge(mydata,all_variants,by="variant",all=T)
       #
-      # Remove variants outside hwe
+      # Remove variants outside HWE
       #
       mydata<-mydata[p_hwe>pco_HWE]
       #
@@ -163,7 +163,7 @@ for (pheno in phenotypes) {
         }
       }
       #
-      # Remove variants that cannot be fine mapped for lack of LD matrix
+      # Remove variants that cannot be fine-mapped for lack of LD matrix
       #
       myvariants<-subset.data.frame(myvariants,LD.name!="none")
       #
@@ -276,7 +276,7 @@ for (pheno in phenotypes) {
           if (length(index)>0) result<-result[-index,]
         }
         #
-        # Add gene description and keep only protein coding genes
+        # Add gene description and keep only protein-coding genes
         #
         if(nrow(result)>0) {
           a<-get_genes(result$geneSymbol,.verbose=F)
@@ -355,7 +355,7 @@ for (pheno in phenotypes) {
           pos<-as.numeric(strsplit(myvariants$var.GRCh38[vi],"_")[[1]][2])
           temp<-ABC[chr==chrom&start<=pos&end>=pos]
           #
-          # Add gene description and keep only protein coding genes
+          # Add gene description and keep only protein-coding genes
           #
           if(nrow(temp)>0) {
             a<-get_genes(temp$TargetGene,.verbose=F)
@@ -511,4 +511,5 @@ for (pheno in phenotypes) {
       write.table(mygenes,file_name,sep=";",row.names=F,col.names=T)
     }
   }
+
 } 
