@@ -511,5 +511,4 @@ for (pheno in phenotypes) {
       write.table(mygenes,file_name,sep=";",row.names=F,col.names=T)
     }
   }
-
 } 
