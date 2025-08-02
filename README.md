@@ -120,7 +120,7 @@ The script produces intermediate data in `Data/` and final outputs in `UKBB_outp
   
 ## Output: fine-mapping
 
-The following images represent the output of fine-mapping on the phenotypes 20002_1482 (self-reported Chronic Fatigue Syndrome) and ICD-10: R53 (Chronic Fatigue).
+The following images represent the output of fine-mapping on the phenotypes 20002_1482 (self-reported Chronic Fatigue Syndrome) and ICD-10: R53 (Chronic Fatigue). The legend indicates the number of credible sets, the size of each credible set, and the mean linkage disequilibrium (measured as |R|) between each possible pair of variants from the same credible set.
 
 <img width="1000" height="500" alt="20002_1482_both_sexes_1" src="https://github.com/user-attachments/assets/c36f68e6-235a-423f-ac9a-db080ff2814a" />
 <img width="1000" height="500" alt="20002_1482_female_1" src="https://github.com/user-attachments/assets/0133f4ed-e2b9-4e4e-8588-e4e64f1dc107" />
