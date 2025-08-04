@@ -74,7 +74,7 @@ Meaning of the parameters:
 - `hwe_p_value` - cut-off for rejection of the hypothesis of Hardy-Weinberg equilibrium.
 - `maf_common` - variants with minor allele frequency (MAF) above this value are regarded as common.
 - `maf_uncommon` - variants with MAF above this value and below `maf_common` are regarded as uncommon; variants with MAF below `maf_uncommon` are discarded.
-- `pip_cutoff` - variants with a posteriori inclusion probability (PIP) below this value  are removed from the gene-mapping analysis.
+- `pip_cutoff` - variants with a posterior inclusion probability (PIP) below this value  are removed from the gene-mapping analysis.
 - `abc_score_cutoff` - variants with an ABC score below this threshold are not considered to have a regulatory function.
 - `GTEx -> version`: either `gtex_v8` or `gtex_v10` for eQTL detection.
 - `locus -> Radius`: radius of loci, around their respective lead SNP. This affects the size of the LD matrices used for fine-mapping.
