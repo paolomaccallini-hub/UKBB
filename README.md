@@ -118,7 +118,7 @@ The script produces intermediate data in `Data/` and final outputs in `UKBB_outp
 - ABC predictions: <https://mitra.stanford.edu/engreitz/oak/public/Nasser2021/AllPredictions.AvgHiC.ABC0.015.minus150.ForABCPaperV3.txt.gz>
 - RegulomeDB scores: <https://www.regulomedb.org/regulome-search/>
   
-## Output: fine-mapping
+## Output 1: fine-mapping
 
 The following images represent the output of fine-mapping on the phenotypes 20002_1482 (self-reported Chronic Fatigue Syndrome) and ICD-10: R53 (Chronic Fatigue). Posterior Inclusion Probability (PIP) is reported on the y axis, and it represents the probability of being a causal variant. Credible sets are defined as sets of variants whose PIPs sum up to 95%. The legend indicates the number of credible sets, the size of each credible set, and the mean linkage disequilibrium (measured as |R|) between each possible pair of variants from the same credible set.
 
@@ -127,7 +127,7 @@ The following images represent the output of fine-mapping on the phenotypes 2000
 <img width="1000" height="500" alt="R53_female_1" src="https://github.com/user-attachments/assets/4f2b7650-e0d2-4ca8-bf71-a7e12910f8d9" />
 <img width="1000" height="500" alt="R53_male_1" src="https://github.com/user-attachments/assets/917d4ab9-cfe1-49ed-978b-a8e579cdc2c2" />
 
-## Output: gene-mapping
+## Output 2: gene-mapping
 
 The genes associated with the phenotypes, and several details on the associations, are collected in the file My_genes_UKBB.csv, included in this repository. They are also reported in the image below.
 
