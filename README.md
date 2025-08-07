@@ -8,7 +8,7 @@ This repository contains scripts to download UK Biobank summary statistics from 
 It is sufficient to put the three files of the repository in a folder and run UKBB_main.R in RStudio to download and build the required database. Also, it is necessary to put in the same folder the RegulomeDB scores, available here: https://www.regulomedb.org/regulome-search/
 ## Required R packages
 
-The analysis scripts depend on the following R packages:
+The analysis scripts depend on the following R packages: 
 
 - `httr`
 - `R.utils`
