@@ -280,15 +280,17 @@ for (pheno in phenotypes) {
                                                         female_only_tissues))
           }
           if (length(index)>0) result<-result[-index,]
-        }
+        } 
         #
         # Add gene description and keep only protein-coding genes
         #
         if(nrow(result)>0) {
           a<-get_genes(result$geneSymbol,.verbose=F)
-          a<-subset.data.frame(a,select=c("geneSymbol","geneType"))
-          result<-merge(result,a,by="geneSymbol",all.x=T)
-          result<-subset.data.frame(result,geneType=="protein coding")
+          if (nrow(a)>0) {
+            a<-subset.data.frame(a,select=c("geneSymbol","geneType"))
+            result<-merge(result,a,by="geneSymbol",all.x=T)
+            result<-subset.data.frame(result,geneType=="protein coding")
+          }
         }
         #
         # Collaspe results
@@ -518,4 +520,5 @@ for (pheno in phenotypes) {
     }
   }
 } 
+
 
