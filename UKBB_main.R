@@ -209,6 +209,12 @@ for (pheno in phenotypes) {
           LDblock<-LDblock[-index,] 
           if (nrow(LDblock)==0) next
           #
+          # Remove variants already added
+          #
+          index<-which(LDblock$RS_Number%in%myvariants$rsid)
+          LDblock<-LDblock[-index,] 
+          if (nrow(LDblock)==0) next
+          #
           # Select by R2
           #
           LDblock<-subset.data.frame(LDblock,R2>=0.8)
@@ -512,3 +518,4 @@ for (pheno in phenotypes) {
     }
   }
 } 
+
