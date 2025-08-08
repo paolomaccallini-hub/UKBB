@@ -447,7 +447,7 @@ Fine_map_LD<-function(myvariants) {
     las = 2,         # Rotate labels vertically
     cex.axis = 0.6   # Shrink text size
   )
-  title(main=paste0(pheno,", ",sex,", ","chr ",chrom),cex.main=0.8)
+  title(main=paste0(pheno,", ",sex,", ","chr ",myvariants$chr[1]),cex.main=0.8)
   dev.off()
   #
   # Add lead SNP and save
@@ -469,4 +469,5 @@ RegulomeDB<-function(myvariants) {
   #
   return(myvariants)
 }
+
 
