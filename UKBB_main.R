@@ -334,18 +334,16 @@ for (pheno in phenotypes) {
       #
       myvariants$closest.gene<-rep(NA,nrow(myvariants))
       for (vi in 1:nrow(myvariants)) {
-        if (is.na(myvariants$consequence[vi])) {
-          if (!is.na(myvariants$var.GRCh38[vi])) {
-            variant<-gsub("chr","",myvariants$var.GRCh38[vi])
-            variant<-gsub("_b38","",variant)
-          } else {
-            variant<-myvariants$rsid[vi]
-          } 
-          result<-try(variantEffectPredictorQuery(variant),silent=T)
-          if (!is.null(result)) {
-            index<-which.min(abs(result$distanceFromTss))
-            myvariants$closest.gene[vi]<-result$target.approvedSymbol[index]
-          }
+        if (!is.na(myvariants$var.GRCh38[vi])) {
+          variant<-gsub("chr","",myvariants$var.GRCh38[vi])
+          variant<-gsub("_b38","",variant)
+        } else {
+          variant<-myvariants$rsid[vi]
+        } 
+        result<-try(variantEffectPredictorQuery(variant),silent=T)
+        if (!is.null(result)) {
+          index<-which.min(abs(result$distanceFromTss))
+          myvariants$closest.gene[vi]<-result$target.approvedSymbol[index]
         }
       }
       #
@@ -520,5 +518,6 @@ for (pheno in phenotypes) {
     }
   }
 } 
+
 
 
