@@ -23,7 +23,7 @@ if (file.exists(file_name)) file.remove("My_genes_UKBB.csv")
 #
 for (pheno in phenotypes) {
   for (sex in c("female","male","both_sexes")) {
-    file_name<-paste0("UKBB_output/",pheno,".",sex,".tsv")
+    file_name<-paste0("UKBB_output/",pheno,"_",sex,"_finemapped.csv")
     if(!dir.exists(file_name)) {
       #
       #-------------------------------------------------------------------------
@@ -396,7 +396,7 @@ for (pheno in phenotypes) {
       # Save results
       #-------------------------------------------------------------------------
       #
-      file_name<-paste0("UKBB_output/",pheno,"_",sex,"_finemapped",".csv")
+      file_name<-paste0("UKBB_output/",pheno,"_",sex,"_finemapped.csv")
       fwrite(myvariants,file=file_name,sep=";")
       gc() # free unused memory
       #
@@ -518,6 +518,7 @@ for (pheno in phenotypes) {
     }
   }
 } 
+
 
 
 
