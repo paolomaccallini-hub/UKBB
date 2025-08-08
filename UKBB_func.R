@@ -154,7 +154,7 @@ if(!file.exists(file_path)) {
   # Edit the file keeping only the columns: myvariants and p_hwe (this takes a while)
   #
   all_variants<-fread(file_path,header="auto",sep="\t")
-  all_variants<-all_variants[,c("variant","rsid","consequence","consequence_category","p_hwe")]
+  all_variants<-all_variants[,c("variant","rsid","consequence","consequence_category","p_hwe","info")]
   write.table(all_variants,file=file_path,sep="\t",col.names=T,row.names=F)
 }  
 #
@@ -469,5 +469,6 @@ RegulomeDB<-function(myvariants) {
   #
   return(myvariants)
 }
+
 
 
