@@ -101,7 +101,7 @@ The main script can be executed from RStudio or the command line:
 Rscript UKBB_main.R
 ```
 
-Alternatively open `UKBB_main.R` in RStudio and run the script. The script will:
+Alternatively, open `UKBB_main.R` in RStudio and run the script. The script will:
 
 1. Download phenotype data and summary statistics for the selected phenotypes.
 2. Retrieve ABC predictions and load RegulomeDB scores.
